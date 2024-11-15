@@ -133,3 +133,51 @@ For example, let's say we have a sorted list of 100,000 elements and we're searc
 By consistently eliminating half the search space, binary search is able to locate the target element in around log₂(n) steps, where n is the size of the list. This is a significant improvement over the linear search approach, which would require checking each of the 100,000 elements one by one.
 
 The key advantage of binary search is that it can quickly narrow down the search area by making use of the sorted order of the list. This allows it to outperform linear search, especially as the list size grows larger.
+
+
+#### With code binary search step-by-step with the code you provided:
+
+```python
+t = int(input())
+for _ in range(0,t):
+    n,x = map(int,input().split())
+    arr = list(map(int,input().split()))
+    arr.sort()
+
+    l = 0 
+    r = len(arr)-1
+
+    while l<=r:
+        mid = (l+r)//2
+        if arr[mid]==x:
+            print(mid)
+            break
+        
+        elif arr[mid]<x: # right half
+            l = mid+1
+        
+        else : # left half
+            r = mid-1
+        
+    if(l>r):
+        print("-1")
+```
+
+1. We start by initializing two pointers, `l` (left) and `r` (right), to represent the search range. Initially, `l` is set to 0 and `r` is set to the last index of the array (`len(arr)-1`).
+
+2. We then enter a `while` loop that continues as long as `l` is less than or equal to `r`. This means we keep searching as long as the search range has not become empty.
+
+3. Inside the loop, we calculate the middle index `mid` as `(l + r) // 2`.
+
+4. We then check if the element at the middle index `arr[mid]` is equal to the target `x`:
+   - If they are equal, we have found the target element, so we print the index `mid` and break out of the loop.
+
+5. If `arr[mid]` is less than the target `x`, we know the target must be in the right half of the current search range. So, we update the left pointer `l` to `mid + 1` to search the right half.
+
+6. If `arr[mid]` is greater than the target `x`, we know the target must be in the left half of the current search range. So, we update the right pointer `r` to `mid - 1` to search the left half.
+
+7. We repeat steps 3-6 until either the target is found (step 4) or the search range becomes empty (i.e., `l` becomes greater than `r`).
+
+8. If the loop completes without finding the target, we print `-1` to indicate the target was not found in the array.
+
+The key point is that in each iteration, we are able to eliminate half of the search range by comparing the middle element to the target. This allows us to quickly narrow down the search area, leading to the O(log n) time complexity of binary search.
