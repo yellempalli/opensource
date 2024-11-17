@@ -146,3 +146,10 @@ Regarding memory:
 - Can represent 256 different values [0, 255]
 - Boolean theoretically needs only 1 bit, but computers typically allocate 1 byte as it's the smallest addressable unit of memory
 - This is why boolean in most programming languages still uses 1 byte despite only needing 1 bit
+
+
+# Examples : Formatted Strings 
+-   "cjskjdbobevw"
+    f"jh bjnoj[rbje"
+    f"kh vbi {x} phorbe"
+    "kh vbi"+" "+x+" "+"phorbe"
