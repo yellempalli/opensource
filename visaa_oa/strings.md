@@ -1,4 +1,12 @@
+#Assignments :
 
+1. https://leetcode.com/problems/count-elements-with-maximum-frequency/description/
+2. https://leetcode.com/problems/merge-sorted-array/description/
+
+
+
+
+# Notes of the session on 17th November
 1. For Loops in Java and Python:
 
 ```python
