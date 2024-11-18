@@ -1,14 +1,14 @@
 # Loop Practice Session - Teaching Guide
 
 ## Class Overview
-Time: 2 Classes (90 minutes each)
+
 Pages to Cover: 11-17 from [HackerRank Contest - Nirudhyog](https://www.hackerrank.com/contests/nirudhyog-preliminary-contest/challenges/filters/page:17)
 
 ### Instructor Note
 For Pages 13-14:
 - Explain complex problems in detail
 - Students must complete all problems from pages 11-17 by next week
-- Two classes allocated this week
+
 
 ---
 
@@ -19,11 +19,14 @@ For Pages 13-14:
 - Student self-attempt: 5 minutes
 - Discussion: 10 minutes
 
-**Problem 1A: Print Multiples of 5**
-```python
-# Task: Print all multiples of 5 from 1 to 20
-# Expected Output: 5 10 15 20
+**Question 1A:**
+```markdown
+Write a program to print all multiples of 5 from 1 to 20.
+Expected Output: 5 10 15 20
+```
 
+**Solution:**
+```python
 # Solution Approach 1 (For Loop):
 for i in range(5, 21, 5):
     print(i, end=" ")
@@ -35,16 +38,15 @@ while i <= 20:
     i += 5
 ```
 
-**Problem 1B: Print Multiples of N**
+**Question 1B:**
+```markdown
+Given a number N as input, print all multiples of N up to N*4.
+Input: 3
+Output: 3 6 9 12
+```
+
+**Solution:**
 ```python
-# Input: A number n
-# Task: Print multiples of n up to n*4
-
-# Example:
-# Input: 3
-# Output: 3 6 9 12
-
-# Solution:
 n = int(input())
 for i in range(1, 5):
     print(n * i, end=" ")
@@ -62,12 +64,15 @@ for i in range(1, 5):
 - Student self-attempt: 10 minutes
 - Discussion: 15 minutes
 
-**Problem 2A: Array Frequency**
-```python
-# Input: [1, 2, 2, 3, 1, 1]
-# Output: 1:3, 2:2, 3:1
+**Question 2A:**
+```markdown
+Write a program to find frequency of each element in an array.
+Input: [1, 2, 2, 3, 1, 1]
+Output: 1:3, 2:2, 3:1
+```
 
-# Solution:
+**Solution:**
+```python
 arr = list(map(int, input().split()))
 freq = {}
 for num in arr:
@@ -80,12 +85,15 @@ for num, count in freq.items():
     print(f"{num}:{count}", end=" ")
 ```
 
-**Problem 2B: String Character Frequency**
-```python
-# Input: "hello"
-# Output: h:1, e:1, l:2, o:1
+**Question 2B:**
+```markdown
+Write a program to find frequency of each character in a string.
+Input: "hello"
+Output: h:1, e:1, l:2, o:1
+```
 
-# Solution:
+**Solution:**
+```python
 s = input()
 freq = {}
 for char in s:
@@ -107,11 +115,37 @@ for char, count in freq.items():
 - Student self-attempt: 15 minutes
 - Discussion: 20 minutes
 
-```python
-# Input Format:
-# T (number of test cases)
-# N (one number per test case)
+**Question 3:**
+```markdown
+Given T test cases, each containing a number N, perform the following operations:
+1. Find the number of digits in N
+2. Calculate sum of digits in N
+3. Find absolute difference between sum of digits and number of digits
+4. Check if sum of cubes of digits is prime
+5. Count prime numbers between (number of digits) and (sum of digits)
+   - If this count is prime, print "We learn't something"
+   - Else print "It's waste of time"
 
+Input Format:
+First line: T (number of test cases)
+Next T lines: One number N per line
+
+Example:
+Input:
+2
+123
+456
+
+Output for 123:
+Number of digits: 3
+Sum of digits: 6
+Absolute difference: 3
+It's not a prime number
+We learn't something
+```
+
+**Solution:**
+```python
 def count_digits(n):
     count = 0
     while n > 0:
@@ -175,28 +209,6 @@ for _ in range(T):
         print("It's waste of time")
 ```
 
-**Sample Test Case:**
-```
-Input:
-2
-123
-456
-
-Output for 123:
-Number of digits: 3
-Sum of digits: 6
-Absolute difference: 3
-It's not a prime number
-We learn't something
-
-Output for 456:
-Number of digits: 3
-Sum of digits: 15
-Absolute difference: 12
-It's not a prime number
-It's waste of time
-```
-
 **Teaching Points:**
 - Breaking complex problems into functions
 - Importance of modular code
@@ -208,14 +220,14 @@ It's waste of time
 
 ## Class Structure
 
-### Class 1 (90 minutes):
+### BN (90 minutes):
 1. Introduction (10 mins)
    - Overview of pages 11-17
    - Problem-solving strategy
 2. Problem Set 1 & 2 (50 mins)
 3. Start Complex Problems (30 mins)
 
-### Class 2 (90 minutes):
+### AN (90 minutes):
 1. Complete Complex Problems (45 mins)
 2. Practice Session (30 mins)
 3. Assignment & Questions (15 mins)
