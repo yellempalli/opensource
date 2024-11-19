@@ -1,0 +1,6 @@
+X = int(input())
+discount1 = X * 0.1
+discount2 = 100
+max_discount = max(discount1, discount2)
+final_amount = X - max_discount
+print(int(final_amount))
